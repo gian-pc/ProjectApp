@@ -10,6 +10,6 @@ public class ProjectRestController {
 
     @GetMapping("/a")
     public ResponseEntity<String> name() {
-        return new ResponseEntity<String>("sankar", HttpStatus.OK);
+        return new ResponseEntity<String>("carato-backend", HttpStatus.OK);
     }
 }
