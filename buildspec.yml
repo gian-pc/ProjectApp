@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Entered into build phase....
+    post_build:
+      commands:
+        - echo build complete successfully...
+artifacts:
+  files:
+    - target/ProjectAPP.jar
+  discard-paths: yes
+
