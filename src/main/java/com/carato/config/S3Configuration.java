@@ -14,13 +14,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @Getter
 public class S3Configuration {
-    @Value("${spring.s3.access.key}")
+    @Value("${spring.s3.access.key")
     private String accessKey;
 
-    @Value("${spring.s3.secret.key}")
+    @Value("${spring.s3.secret.key")
     private String secreteKey;
 
-    @Value("${spring.s3.bucket.name}")
+    @Value("${spring.s3.bucket.name")
     private String bucketName;
 
     @Bean
