@@ -23,6 +23,7 @@ public class S3Configuration {
     @Value("${spring.s3.bucket.name}")
     private String bucketName;
 
+
     @Bean
     public BasicAWSCredentials getCredentials(){
         return new BasicAWSCredentials(accessKey,secreteKey);
