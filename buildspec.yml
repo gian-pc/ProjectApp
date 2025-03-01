@@ -5,11 +5,13 @@ phases:
     commands:
       - echo Entered into build phase....
       - mvn clean package
+      - cp src/main/resources/application.properties target/application.properties  # Copiar archivo de configuración
     post_build:
       commands:
         - echo build complete successfully...
+
 artifacts:
   files:
     - target/ProjectAPP.jar
+    - target/application.properties  # Asegurar que el archivo se incluya en el paquete
   discard-paths: yes
-

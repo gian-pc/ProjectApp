@@ -46,11 +46,12 @@ public class ProjectRestController {
 
         try {
             String bucketName = config.getBucketName();
+
             client.putObject(new PutObjectRequest(bucketName,image.getOriginalFilename(),
                     image.getInputStream(), new ObjectMetadata())
                     .withCannedAcl(CannedAccessControlList.PublicRead));
 
-            String imgSrc = "http://"+bucketName+".s3.amazonaws.com/"+image.getOriginalFilename();
+            String imgSrc = "http://" + bucketName + ".s3.amazonaws.com/" + image.getOriginalFilename();
 
             project = repo.save(new ProjectEntity(name, Long.parseLong(duration), imgSrc));
         } catch (IOException e) {

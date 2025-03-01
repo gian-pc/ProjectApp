@@ -9,7 +9,6 @@ import lombok.*;
 @Entity(name = "projectentity1")
 @Getter
 @Setter
-@NoArgsConstructor
 @RequiredArgsConstructor
 public class ProjectEntity {
     @Id
@@ -23,7 +22,10 @@ public class ProjectEntity {
     private Long duration;
 
     @NonNull
-    private String imageUrl;
+    private String imageurl;
 
 
+    public ProjectEntity() {
+
+    }
 }
